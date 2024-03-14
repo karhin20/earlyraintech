@@ -115,7 +115,9 @@ const Footer = () => {
             <h6 className="fw-bold">Get in Touch</h6>
 
             <p>Address: 07 Red Okai Street, Achimota, Accra-Ghana</p>
-            <p> Phone: +233543 119 117 </p>
+            <a href="tel:+233543119117" className="mb-0 d-flex align-items-center gap-2">
+                <i className="ri-phone-line"></i> +233 543 119 117
+            </a>
             <p>Email: example@gmail.com</p>
           </Col>
         </Row>

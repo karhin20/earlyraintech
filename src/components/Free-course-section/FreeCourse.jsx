@@ -12,25 +12,25 @@ import "./free-course.css";
 const freeCourseData = [
   {
     id: "01",
-    title: "Basic Web Development Course",
+    title: " Introduction to HTML/CSS -2024",
     imgUrl: courseImg01,
     students: 5.3,
-    rating: 1.7,
+    rating: 6.7,
   },
   {
     id: "02",
-    title: "Coding for Junior Basic Course",
+    title: "Introduction to Git and Github -2024",
     imgUrl: courseImg02,
     students: 5.3,
-    rating: 1.7,
+    rating: 5.7,
   },
 
   {
     id: "03",
-    title: "Search Engine Optimization - Basic",
+    title: "Basic Graphic Design with Photoshop",
     imgUrl: courseImg03,
     students: 5.3,
-    rating: 1.7,
+    rating: 3.5,
   },
 
   {
@@ -38,7 +38,7 @@ const freeCourseData = [
     title: "Basic UI/UX Design - Figma",
     imgUrl: courseImg04,
     students: 5.3,
-    rating: 1.7,
+    rating: 4.7,
   },
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import courseImg1 from "../../assests/images/web-design.png";
-import courseImg2 from "../../assests/images/graphics-design.png";
+import courseImg2 from "../../assests/images/scratch.png";
 import courseImg3 from "../../assests/images/ui-ux.png";
 import "./courses.css";
 import CourseCard from "./CourseCard";
@@ -9,28 +9,28 @@ import CourseCard from "./CourseCard";
 const coursesData = [
   {
     id: "01",
-    title: "Web Development for Beginners -2024",
-    lesson: 12,
+    title: "Web Development for Complete Beginners -2024",
+    lesson: 54,
     students: 12.5,
-    rating: 5.9,
+    rating: 7.9,
     imgUrl: courseImg1,
   },
 
   {
     id: "02",
-    title: "Professional Graphics Design with PhotoShop",
+    title: "Scratch for future programming world-beaters -2024",
     lesson: 12,
     students: 12.5,
-    rating: 5.9,
+    rating: 8.5,
     imgUrl: courseImg2,
   },
 
   {
     id: "03",
-    title: "UI/UX BootCamp for Beginners in 2024",
+    title: "Python Programming for Complete Beginners - 2024",
     lesson: 12,
     students: 12.5,
-    rating: 5.9,
+    rating: 7.7,
     imgUrl: courseImg3,
   },
 ];
