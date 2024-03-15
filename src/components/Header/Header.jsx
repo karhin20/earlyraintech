@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import "./header.css";
 
@@ -11,7 +11,6 @@ const navLinks = [
     display: "About",
     url: "#",
   },
-
   {
     display: "Courses",
     url: "#",
@@ -30,6 +29,23 @@ const Header = () => {
   const menuRef = useRef();
 
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 0) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -52,10 +68,9 @@ const Header = () => {
               </ul>
             </div>
 
-           < div className="nav__right">
-              <a href="tel:+233543119117" className="mb-0 d-flex align-items-center gap-2">
+            <div className="nav__right">
                 <i className="ri-phone-line"></i> +233 543 119 117
-              </a>
+
             </div>
           </div>
 

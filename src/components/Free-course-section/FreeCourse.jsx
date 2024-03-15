@@ -19,7 +19,7 @@ const freeCourseData = [
   },
   {
     id: "02",
-    title: "Introduction to Git and Github -2024",
+    title: "Introduction to Git and Github",
     imgUrl: courseImg02,
     students: 5.3,
     rating: 5.7,
@@ -27,7 +27,7 @@ const freeCourseData = [
 
   {
     id: "03",
-    title: "Basic Graphic Design with Photoshop",
+    title: "Graphic Design with Photoshop",
     imgUrl: courseImg03,
     students: 5.3,
     rating: 3.5,
