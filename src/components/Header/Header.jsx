@@ -48,17 +48,20 @@ const Header = () => {
     };
   }, []);
 
+  const handleCall = () => {
+    window.location.href = "tel:+233543119117";
+  };
+
   return (
     <header className="header">
       <Container>
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
-          
-            <h2 className=" d-flex align-items-center gap-1">
-            <Link to="./home">
-              <i className="ri-pantone-line"></i> </Link>Early Rain Tech.
+            <h2 className="d-flex align-items-center gap-1">
+              <Link to="/" style={{ color: "black", textDecoration: "none" }}>
+                <i className="ri-pantone-line"></i> Early Rain Tech.
+              </Link>
             </h2>
-          
           </div>
 
           <div className="nav d-flex align-items-center gap-5">
@@ -69,11 +72,16 @@ const Header = () => {
                     <Link to={item.url}>{item.display}</Link>
                   </li>
                 ))}
+                {window.innerWidth <= 768 && (
+                  <li className="nav__item" onClick={handleCall}>
+                    <h5>+233543119117</h5>
+                  </li>
+                )}
               </ul>
             </div>
 
             <div className="nav__right">
-                <i className="ri-phone-line"></i> +233 543 119 117
+              <i className="ri-phone-line"></i> +233 543 119 117
             </div>
           </div>
 

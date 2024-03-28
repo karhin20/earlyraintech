@@ -3,6 +3,10 @@
   height: 80px;
   line-height: 80px;
   transition: background-color 0.3s;
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .nav__list {
