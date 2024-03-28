@@ -14,7 +14,7 @@ const HeroSection = () => {
               At your convinience <br /> Learn on your <br /> Suitable Schedule
               </h2>
               <p className="mb-5">
-                Select from our wide range of courses <br/> to suit your interest or that of your ward! <br />
+                Select from our wide range of <strong>hands-on <br/> and project-based </strong>  courses to suit your <br/> interest or that of your ward! <br />
                 
               </p>
             </div>

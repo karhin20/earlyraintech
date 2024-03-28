@@ -1,26 +1,26 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const footerQuickLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "/",
   },
   {
     display: "About US",
-    url: "#",
+    url: "/about",
   },
 
   {
     display: "Courses",
-    url: "#",
+    url: "/courses",
   },
 
   {
     display: "Blog",
-    url: "#",
+    url: "/blog",
   },
 ];
 
@@ -51,9 +51,9 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="6" className="mb-4">
-            <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Learn-Tech.
-            </h2>
+            <h4 className=" d-flex align-items-center gap-1">
+              <i class="ri-pantone-line"></i> Early Rain Tech.
+            </h4>
 
             <div className="follows">
               <p className="mb-0">Follow us on social media</p>
@@ -93,7 +93,7 @@ const Footer = () => {
               {footerQuickLinks.map((item, index) => (
                 <ListGroupItem key={index} className="border-0 ps-0 link__item">
                   {" "}
-                  <a href={item.url}>{item.display}</a>
+                  <Link to={item.url}>{item.display}</Link>
                 </ListGroupItem>
               ))}
             </ListGroup>

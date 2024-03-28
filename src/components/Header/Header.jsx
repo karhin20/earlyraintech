@@ -1,27 +1,28 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const navLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "/",
   },
   {
     display: "About",
-    url: "#",
+    url: "/about",
   },
   {
     display: "Courses",
-    url: "#",
+    url: "/courses",
   },
   {
     display: "Pages",
-    url: "#",
+    url: "/pages",
   },
   {
     display: "Blog",
-    url: "#",
+    url: "/blog",
   },
 ];
 
@@ -52,9 +53,12 @@ const Header = () => {
       <Container>
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
+          
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Early Rain Tech.
+            <Link to="./home">
+              <i className="ri-pantone-line"></i> </Link>Early Rain Tech.
             </h2>
+          
           </div>
 
           <div className="nav d-flex align-items-center gap-5">
@@ -62,7 +66,7 @@ const Header = () => {
               <ul className="nav__list">
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    <a href={item.url}>{item.display}</a>
+                    <Link to={item.url}>{item.display}</Link>
                   </li>
                 ))}
               </ul>
@@ -70,13 +74,12 @@ const Header = () => {
 
             <div className="nav__right">
                 <i className="ri-phone-line"></i> +233 543 119 117
-
             </div>
           </div>
 
           <div className="mobile__menu">
             <span>
-              <i class="ri-menu-line" onClick={menuToggle}></i>
+              <i className="ri-menu-line" onClick={menuToggle}></i>
             </span>
           </div>
         </div>

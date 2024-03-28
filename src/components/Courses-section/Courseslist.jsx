@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
 import courseImg1 from "../../assests/images/web-design.png";
 import courseImg2 from "../../assests/images/scratch.png";
 import courseImg3 from "../../assests/images/ui-ux.png";
@@ -36,24 +35,18 @@ const coursesData = [
   },
 ];
 
-const Courses = () => {
+
+
+const CoursesList = () => {
   return (
     <section>
       <Container>
         <Row>
           <Col lg="12" className="mb-5">
             <div className="course__top d-flex justify-content-between align-items-center">
-              <div className="course__top__left w-50">
-                <h2>Our Popular Courses</h2>
-                <p>
-                  Upgrade your Sills now. Select a course to enroll
-                </p>
-              </div>
 
-              <div className="w-50 text-end">
-              <Link to="./courses">
-                <button className="btn">See All</button>
-              </Link>
+              <div className="course__top__left w-50">
+                <button className="btn">All Courses</button>
               </div>
             </div>
           </Col>
@@ -68,4 +61,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default CoursesList;
