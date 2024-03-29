@@ -53,9 +53,6 @@ const Testimonials = () => {
                         Excellent course of materials
                       </h6>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis saepe id voluptas molestiae. Aperiam corrupti
-                        voluptas earum at molestiae neque!
                         The projects I did alongside during learning gave 
                         me pactical application of the theory and greatly 
                         increased my understanding
