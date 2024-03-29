@@ -74,7 +74,7 @@ const Header = () => {
                 ))}
                 {window.innerWidth <= 768 && (
                   <li className="nav__item" onClick={handleCall}>
-                    <i className="ri-phone-line"></i>+233543119117
+                    <i className="ri-phone-line"></i> +233543119117
                   </li>
                 )}
               </ul>
