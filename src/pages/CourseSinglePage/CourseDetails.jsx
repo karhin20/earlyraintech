@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Col, Card, CardImg, CardBody, CardText, ListGroup, ListGroupItem } from 'reactstrap';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import {coursesData} from "../../assests/CourseData";
+import { coursesData } from "../../assests/CourseData";
 import ReactPlayer from 'react-player';
 
 const CourseDetails = () => {
