@@ -3,6 +3,7 @@ import Courses from './pages/Courses';
 import About from './pages/About';
 import CourseDetails from './pages/CourseSinglePage/CourseDetails';
 import Home from "./pages/Home";
+import CoursesList from './components/Courses-section/Courseslist';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />  
+        <Route path="/courses/:title" element={<CourseDetails />} />  
       </Routes>
     </BrowserRouter>
   );   

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseCard = (props) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
@@ -6,11 +7,15 @@ const CourseCard = (props) => {
   return (
     <div className="single__course__item">
       <div className="course__img">
+      <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
         <img src={imgUrl} alt="" className="w-100" />
+      </Link>
       </div>
 
       <div className="course__details">
+      <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
         <h6 className="course__title mb-4">{title}</h6>
+      </Link>
 
         <div className=" d-flex justify-content-between align-items-center">
           <p className="lesson d-flex align-items-center gap-1">

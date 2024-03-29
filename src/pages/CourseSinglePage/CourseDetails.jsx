@@ -7,16 +7,16 @@ import { coursesData } from "../../assests/CourseData";
 import ReactPlayer from 'react-player';
 
 const CourseDetails = () => {
-  const { id } = useParams();
+  const { title } = useParams();
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    const selectedCourse = coursesData.find((course) => course.id === id);
+    const selectedCourse = coursesData.find((course) => course.title === title);
     window.scrollTo(0, 0);
     if (selectedCourse) {
       setCourse(selectedCourse);
     }
-  }, [id]);
+  }, [title]);
 
   return (
     <>
@@ -26,7 +26,7 @@ const CourseDetails = () => {
           <Container>
             <Row>
               <Col>
-                <h1>{course.title}</h1>
+              <h1 style={{ padding: "50px" }}>{course.title}</h1>
                 <Card>
                   <CardImg top src={course.imgUrl} alt={course.title} />
                   <CardBody>
@@ -46,7 +46,7 @@ const CourseDetails = () => {
           <Footer />
         </>
       ) : (
-        <h1>Course not found</h1>
+        <h6>Loading...</h6>
       )}
     </>
   );

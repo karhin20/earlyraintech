@@ -5,11 +5,13 @@ import FreeCourse from "../components/Free-course-section/FreeCourse";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
+import ScrollToTopOnMount from "./ScrolltoTop";
 
 const Courses = () => {
   return (
     <Fragment>
-      <Header />             
+      <Header />
+      <ScrollToTopOnMount />            
       <CoursesList />
       <FreeCourse />
       <Testimonials />

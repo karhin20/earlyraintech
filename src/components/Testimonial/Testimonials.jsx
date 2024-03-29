@@ -56,6 +56,9 @@ const Testimonials = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Facilis saepe id voluptas molestiae. Aperiam corrupti
                         voluptas earum at molestiae neque!
+                        The projects I did alongside during learning gave 
+                        me pactical application of the theory and greatly 
+                        increased my understanding
                       </p>
 
                       <div className="student__info mt-4">

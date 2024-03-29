@@ -1,46 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-
-import courseImg01 from "../../assests/images/web-development.png";
-import courseImg02 from "../../assests/images/kids-learning.png";
-import courseImg03 from "../../assests/images/seo.png";
-import courseImg04 from "../../assests/images/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
+import { freeCourseData } from "../../assests/CourseData";
 
 import "./free-course.css";
 
-const freeCourseData = [
-  {
-    id: "01",
-    title: " Introduction to HTML/CSS -2024",
-    imgUrl: courseImg01,
-    students: 5.3,
-    rating: 6.7,
-  },
-  {
-    id: "02",
-    title: "Introduction to Git and Github",
-    imgUrl: courseImg02,
-    students: 5.3,
-    rating: 5.7,
-  },
-
-  {
-    id: "03",
-    title: "Graphic Design with Photoshop",
-    imgUrl: courseImg03,
-    students: 5.3,
-    rating: 3.5,
-  },
-
-  {
-    id: "04",
-    title: "Basic UI/UX Design - Figma",
-    imgUrl: courseImg04,
-    students: 5.3,
-    rating: 4.7,
-  },
-];
 
 const FreeCourse = () => {
   return (

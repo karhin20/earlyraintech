@@ -13,11 +13,13 @@ import Testimonials from "../components/Testimonial/Testimonials";
 
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
+import ScrollToTopOnMount from "./ScrolltoTop";
 
 const Home = () => {
   return (
     <Fragment>
       <Header />
+      <ScrollToTopOnMount />
       <HeroSection />
       <CompanySection />
       <AboutUs />
