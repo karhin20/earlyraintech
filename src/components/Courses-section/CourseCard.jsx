@@ -33,7 +33,7 @@ const CourseCard = (props) => {
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">
-            <a href="/enroll"> Enroll Now</a>
+            <a href="https://formfacade.com/public/101831235159428287253/all/form/1FAIpQLSdYEuZmv4AGpvnNuRU7sXlWy18WMdkHx4yb1Y1RhZEDPjq2Qw"> Enroll Now</a>
           </p>
         </div>
       </div>

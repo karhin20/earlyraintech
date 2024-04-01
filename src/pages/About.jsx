@@ -4,13 +4,15 @@ import AboutUs from "../components/About-us/AboutUs"
 import Footer from "../components/Footer/Footer";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Testimonials from "../components/Testimonial/Testimonials";
+import ScrollToTopOnMount from "./ScrolltoTop";
 
 
 
 const About = () => {
     return (
       <Fragment>
-        <Header />             
+        <Header /> 
+        <ScrollToTopOnMount />            
         <AboutUs/>
         <Testimonials />
         <Newsletter />
