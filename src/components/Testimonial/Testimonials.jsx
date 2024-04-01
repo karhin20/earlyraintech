@@ -35,9 +35,10 @@ const Testimonials = () => {
                         Excellent course of materials
                       </h6>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis saepe id voluptas molestiae. Aperiam corrupti
-                        voluptas earum at molestiae neque!
+                        "I've tried various platforms to learn tech skills, 
+                        but none have compared to this platform. The combination 
+                        of theory and hands-on projects truly  boosted my 
+                        confidence in applying what I've learned."
                       </p>
 
                       <div className="student__info mt-4">
@@ -53,9 +54,10 @@ const Testimonials = () => {
                         Excellent course of materials
                       </h6>
                       <p>
-                        The projects I did alongside during learning gave 
-                        me pactical application of the theory and greatly 
-                        increased my understanding
+                        
+                      The hands-on projects I engaged in while learning provided 
+                      me with practical application of the theoretical concepts, 
+                      significantly enhancing my comprehension.
                       </p>
 
                       <div className="student__info mt-4">
@@ -71,13 +73,13 @@ const Testimonials = () => {
                         Excellent course of materials
                       </h6>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis saepe id voluptas molestiae. Aperiam corrupti
-                        voluptas earum at molestiae neque!
+                        "This platform's real-world applications enhanced my 
+                        skills profoundly. The practical approach helped 
+                        me grasp complex concepts effortlessly. Highly recommend!"
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Joseph </h6>
+                        <h6 className="fw-bold">Joseph Nyamekye</h6>
                         <p>Achimota, Accra</p>
                       </div>
                     </div>

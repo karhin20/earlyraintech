@@ -33,7 +33,7 @@ const CourseCard = (props) => {
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">
-            <a href="#"> Enroll Now</a>
+            <a href="/enroll"> Enroll Now</a>
           </p>
         </div>
       </div>
