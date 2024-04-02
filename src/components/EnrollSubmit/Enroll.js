@@ -1,134 +1,162 @@
-import React from "react";
-import { Form, FormGroup, Label, Input, Button, Col, Row, FormFeedback } from "reactstrap";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import FullScreenSection from "./FullScreenSection";
+import { useCallback } from "react";
+import {  Row, Col, Button, Form, Input, Radio, Space, notification } from "antd";
+import FullscreenSection from "./FullScreenSection"
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
+import "./enroll.css"
 
-const Enroll = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      email: "",
-      phone: "",
-      country: "",
-      selectedCourse: "",
-      isRegistering: false,
-    },
-    validationSchema: Yup.object({
-      firstName: Yup.string().required("First Name is required"),
-      email: Yup.string().email("Invalid email address").required("Email is required"),
-      phone: Yup.string().required("Phone Number is required"),
-      country: Yup.string().required("Country is required"),
-      selectedCourse: Yup.string().required("Select a Course is required"),
-    }),
 
-    onSubmit: () => {
-      // Form submission will be handled by Netlify Forms
+const CustomGoogleForms = () => {
+  const [form] = Form.useForm();
+  const [api, contextHolder] = notification.useNotification();
+
+  const onFinish = useCallback(
+    async ({ learner, learnername, age, country, email, phone, course, classtype }) => {
+      try {
+        await fetch(
+          "https://docs.google.com/forms/d/e/1FAIpQLSdYEuZmv4AGpvnNuRU7sXlWy18WMdkHx4yb1Y1RhZEDPjq2Qw/formResponse?" +
+            new URLSearchParams({
+              "entry.945611636": learner,
+              "entry.2005620554": learnername,
+              "entry.1065046570": age,
+              "entry.397613442": country,
+              "entry.1045781291": email,
+              "entry.1166974658": phone,
+              "entry.839337160": course,
+              "entry.1791338117": classtype,
+            }),
+          {
+            mode: "no-cors",
+          }
+        );
+        api.success({
+          message: "Submitted successfully, We will be in touch soon",
+        });
+        form.resetFields();
+      } catch (e) {
+        api.error({
+          message: e.message,
+        });
+      }
     },
-  });
+    [api, form]
+  );
+///'text-left p-5'
 
   return (
-    <FullScreenSection isDarkBackground backgroundColor="#02fff244" py={16} spacing={8}>
-      <Row>
-        <Col md={{ size: 6, offset: 3 }}>
-          <h1>Enroll for a course</h1>
-          <p>Note: You can register for yourself or on behalf of a LEARNER</p>
-          <Form className="form" name="enroll-form" method="POST" data-netlify="true">
-            <FormGroup>
-              <Label for="firstName">First Name</Label>
-              <Input
-                id="firstName"
-                name="firstName"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.firstName}
-              />
-              {formik.errors.firstName && <FormFeedback>{formik.errors.firstName}</FormFeedback>}
-            </FormGroup>
-            <FormGroup>
-              <Label for="email">Email Address</Label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-                invalid={formik.touched.email && formik.errors.email}
-              />
-              {formik.errors.email && <FormFeedback>{formik.errors.email}</FormFeedback>}
-            </FormGroup>
-            <FormGroup>
-              <Label for="phone">Phone Number</Label>
-              <Input
-                id="phone"
-                name="phone"
-                type="tel"
-                onChange={formik.handleChange}
-                value={formik.values.phone}
-                invalid={formik.touched.phone && formik.errors.phone}
-              />
-              {formik.errors.phone && <FormFeedback>{formik.errors.phone}</FormFeedback>}
-            </FormGroup>
-            <FormGroup>
-              <Label for="country">Country</Label>
-              <Input
-                id="country"
-                name="country"
-                type="select"
-                onChange={formik.handleChange}
-                value={formik.values.country}
-                invalid={formik.touched.country && formik.errors.country}
-              >
-                <option value="">Select Country</option>
-                <option value="GH">Ghana</option>
-                <option value="CI">Cote d'Ivoire</option>
-                <option value="NG">Nigeria</option>
-                <option value="USA">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="CA">Canada</option>
-                <option value="OTHER">Other</option>
-              </Input>
-              {formik.errors.country && <FormFeedback>{formik.errors.country}</FormFeedback>}
-            </FormGroup>
-            <FormGroup>
-              <Label for="selectedCourse">Select a Course</Label>
-              <Input
-                id="selectedCourse"
-                name="selectedCourse"
-                type="select"
-                onChange={formik.handleChange}
-                value={formik.values.selectedCourse}
-                invalid={formik.touched.selectedCourse && formik.errors.selectedCourse}
-              >
-                <option value="">Select a Course</option>
-                <option value="python">Python Programming for Beginners</option>
-                <option value="scratch">Scratch (Recommended for Juniors)</option>
-                <option value="webDev">Web Development for Beginners</option>
-              </Input>
-              {formik.errors.selectedCourse && <FormFeedback>{formik.errors.selectedCourse}</FormFeedback>}
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  id="isRegistering"
-                  name="isRegistering"
-                  onChange={formik.handleChange}
-                  checked={formik.values.isRegistering}
-                />{' '}
-                Are you registering on behalf of a learner?
-              </Label>
-            </FormGroup>
-            <Button type="submit" color="primary">
+    <>
+      {contextHolder}
+      <Header />
+      <Row style={{ display: "flex", flexDirection: "row" }} className="d-flex align-items-center justify-content-space-between">
+        <Col lg={8}  style={{ order: 2}}>
+          <FullscreenSection>
+
+          <Form
+            form={form}
+            layout="vertical"
+            onFinish={onFinish}
+            className=" form-container"
+          >
+          <h4>Enroll in Course</h4>
+          <p style={{ paddingBottom: '20px'}}>Kindly fill this accurately. We will contact you shortly!</p>
+          
+            <Form.Item
+              name="learner"
+              label="Are you registering for a Learner?"
+              rules={[{ required: true, message: "This question is must be answered"}]}
+            >
+              <Radio.Group>
+                <Space direction="vertical">
+                  <Radio value="YES, I will be learning myself">YES, I will be learning myself</Radio>
+                  <Radio value="NO, I am registering for another person">NO, I am registering for another person</Radio>
+                </Space>
+              </Radio.Group>
+            </Form.Item>
+            
+            <Form.Item
+              name="learnername"
+              label="Learner's Name"
+              rules={[{ required: true, message: "Learner's name is required"}]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              name="age"
+              label="Learner's Age"
+              rules={[{ required: true, message: "Age of Learner is required" }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              name="country"
+              label="Current Country of Residence"
+              rules={[{ required: true, message: "Country is required" }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[{ type: "email", message: "Please enter a valid email address" }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              name="phone"
+              label="Phone Number"
+              rules={[
+                { required: true, message: "Phone number is required" },
+                { pattern: /^(\+\d{1,3}[- ]?)?\d{10}$/, message: "Please enter a valid phone number" }
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            
+            <Form.Item
+              name="course"
+              label="Select a Course"
+              rules={[{ required: true, message: "A course must be selected" }]}
+            >
+              <Radio.Group >
+                <Space direction="vertical">
+                  <Radio value="Python Programming for Beginners">Python Programming for Beginners</Radio>
+                  <Radio value="Scratch (Recommended for Juniors)">Scratch (Recommended for Juniors)</Radio>
+                  <Radio value="Web Development for Beginners">Web Development for Beginners</Radio>
+                </Space>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="classtype"
+              label="Type of Lessons (Mode of class delivery)"
+              rules={[{ required: true, message: "Mode of class delivery" }]}
+            >
+              <Radio.Group>
+                <Space direction="vertical">
+                  <Radio value="Online">Online</Radio>
+                  <Radio value="Online, Individual (One On One)"> Online, Individual (One On One)</Radio>
+                  <Radio value="In-person Individual"> In-person, Individual (One on One)</Radio>
+                </Space>
+              </Radio.Group>
+            </Form.Item>
+
+            <Button type="primary" htmlType="submit">
               Submit
             </Button>
           </Form>
+          </FullscreenSection>
         </Col>
+        <Col lg={16} className='col-right' style={{ order: 1 }}>
+      
+        <img src="https://i.imgur.com/q3NcLTG.png" alt="learn coding now" style={{ width: "100%", maxWidth: "400px" }}/>
+      </Col>
       </Row>
-    </FullScreenSection>
+      <Footer />
+    </>
   );
 };
 
-export default Enroll;
+export default CustomGoogleForms;
