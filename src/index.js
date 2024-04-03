@@ -14,4 +14,3 @@ createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 );
 
-window.scrollTo(0, 0);

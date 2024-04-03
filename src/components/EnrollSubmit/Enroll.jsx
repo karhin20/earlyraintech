@@ -47,8 +47,8 @@ const CustomGoogleForms = () => {
     <>
       {contextHolder}
       <Header />
-      <Row style={{ display: "flex", flexDirection: "row" }} className="d-flex align-items-center justify-content-space-between">
-        <Col lg={8}  style={{ order: 2}}>
+      <Row style={{ display: "flex", flexDirection: "row" }} className= "align-items-center justify-content-space-between">
+        <Col lg={10}  className="d-flex align-items-left" style={{ order: 2}}>
           <FullscreenSection>
 
           <Form
@@ -57,8 +57,8 @@ const CustomGoogleForms = () => {
             onFinish={onFinish}
             className=" form-container"
           >
-          <h4>Enroll in Course</h4>
-          <p style={{ paddingBottom: '20px'}}>Kindly fill this accurately. We will contact you shortly!</p>
+          <h4 style={{ paddingTop: '40px'}}>Enroll in Course</h4>
+          <p style={{ paddingBottom: '40px'}}>Kindly fill this accurately. We will contact you shortly!</p>
           
             <Form.Item
               name="learner"
@@ -149,10 +149,11 @@ const CustomGoogleForms = () => {
           </Form>
           </FullscreenSection>
         </Col>
-        <Col lg={16} className='col-right' style={{ order: 1 }}>
-      
-        <img src="https://i.imgur.com/q3NcLTG.png" alt="learn coding now" style={{ width: "100%", maxWidth: "400px" }}/>
-      </Col>
+        <Col lg={14} className= "align-items-center">
+        <div className="enroll-img">
+          <img src="https://i.imgur.com/q3NcLTG.png" alt="learn coding now" style={{ width: "100%", maxWidth: "800px"}}/>
+        </div>
+        </Col>
       </Row>
       <Footer />
     </>

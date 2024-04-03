@@ -1,39 +1,31 @@
-form-container {
-    display:flex;
+.form-container { 
     margin-top: 20px;
     margin-bottom: 50px;
 }
   
   .form-container form {
     width: 100%;
-    max-width: 400px; 
+    max-width: 40px; 
   }
 
   .form-container input{
     background-color: #61dafb;
     color: rgb(0, 0, 0);
     opacity: 0.8;
-    border: none !important;
+    width: 40%;
+    border: black;
   }
-  .form-container form {
-    width: calc(50% - 10px); /* Adjust width to take up half of the space */
-    max-width: 400px;
+
+
+.enroll-img {
+    width: calc(50% - 10px); 
+    height: calc(50% - 10px);
+    margin-left: 30%;
+    margin-top: -50%
 }
 
-.form-container img {
-    width: calc(50% - 10px); /* Adjust width to take up half of the space */
-    max-width: 400px;
-}
-
-.col-left {
-    flex: 1; /* Allow the left column to take up available space */
-}
-
-.col-right {
-    flex: 1; /* Allow the right column to take up available space */
-}
-
-.row-container {
-    display: flex;
-    justify-content: space-between; 
+@media (max-width: 1024px) {
+  .enroll-img {
+      margin-top: 0%;
+  }
 }
