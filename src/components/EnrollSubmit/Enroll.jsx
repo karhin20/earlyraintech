@@ -30,18 +30,21 @@ const CustomGoogleForms = () => {
           }
         );
         api.success({
-          message: "Submitted successfully, We will be in touch soon",
+          message: "Submitted successfully. Thank you for your enrollment. We will be in touch soon",
+          placement: "bottomRight",
+          duration: 0
         });
         form.resetFields();
       } catch (e) {
         api.error({
           message: e.message,
+          placement: "bottomRight",
+          duration: 0
         });
       }
     },
     [api, form]
   );
-///'text-left p-5'
 
   return (
     <>
