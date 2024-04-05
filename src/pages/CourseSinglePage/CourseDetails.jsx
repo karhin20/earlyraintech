@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Container, Row, Col, Card, CardImg, CardBody, CardText, ListGroup, ListGroupItem } from 'reactstrap';
+import { useParams, Link } from "react-router-dom";
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { coursesData } from "../../assests/CourseData";
@@ -25,23 +25,50 @@ const CourseDetails = () => {
           <Header />
           <Container>
             <Row>
+              <h2 style={{ paddingTop: "100px" }}>{course.title}</h2>
               <Col>
-              <h1 style={{ padding: "50px" }}>{course.title}</h1>
-                <Card>
-                  <CardImg top src={course.imgUrl} alt={course.title} />
-                  <CardBody>
-                    <CardText>{course.Description}</CardText>
-                  </CardBody>
-                </Card>
+                <div>
+                  <p1>{course.Description}</p1>
+                </div>
+                <div>
                 <ReactPlayer url={course.videourl} controls />
+                </div>
+              </Col>
+              <Col className="lesson gap-5">
+                <div>
+                  <div>
+                   <h5> <i class="ri-book-open-line"> </i> {course.lesson} Lessons </h5>
+                  </div>
+                  <div>
+                    <h5> <i class="ri-user-line"></i> {course.students} Learners</h5>
+                  </div>
+                  <div>
+                    <h5> <i class="ri-star-fill"></i> {course.rating} </h5>
+                  </div>
+                  <div>
+                    <h5><i class="ri-computer-fill"></i> {course.Requirements}</h5>
+                  </div>
+                  <div>
+                    <h5>
+                      <Link to="/enroll">
+                        <button className="course-btn">Enroll Now</button>
+                      </Link>
+                    </h5>
+                </div>
+                <div>
+                    <h5><i class="ri-code-s-slash-fill" ></i> {course.difficulty}</h5>
+                </div>
+                </div>
+              </Col>
+            </Row>
+              <Col>
                 <h2>Course Projects:</h2>
-                <ListGroup>
+                <ul>
                   {course["Course related projects to be completed"].map((project, index) => (
                     <ListGroupItem key={index}>{project}</ListGroupItem>
                   ))}
-                </ListGroup>
+                </ul>
               </Col>
-            </Row>
           </Container>
           <Footer />
         </>

@@ -12,7 +12,7 @@
     background-color: #61dafb;
     color: rgb(0, 0, 0);
     opacity: 0.8;
-    width: 40%;
+    width: 60%;
     border: black;
   }
 
@@ -20,7 +20,7 @@
 .enroll-img {
     width: calc(50% - 10px); 
     height: calc(50% - 10px);
-    margin-left: 30%;
+    margin-left: 25%;
     margin-top: -50%
 }
 

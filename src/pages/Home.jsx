@@ -19,7 +19,6 @@ const Home = () => {
   return (
     <Fragment>
       <Header />
-      <ScrollToTopOnMount />
       <HeroSection />
       <CompanySection />
       <AboutUs />

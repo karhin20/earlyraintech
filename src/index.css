@@ -43,6 +43,13 @@ button.btn {
   border-radius: 50px;
 }
 
+button.course-btn {
+  background: #17bf9e;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 30px;
+}
+
 i {
   color: #17bf9e;
 }

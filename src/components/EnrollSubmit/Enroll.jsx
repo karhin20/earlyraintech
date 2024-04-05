@@ -30,7 +30,7 @@ const CustomGoogleForms = () => {
           }
         );
         api.success({
-          message: "Submitted successfully. Thank you for your enrollment. We will be in touch soon",
+          message: "Submitted successfully. We will be in touch soon. Thank you",
           placement: "bottomRight",
           duration: 0
         });
@@ -86,7 +86,7 @@ const CustomGoogleForms = () => {
 
             <Form.Item
               name="age"
-              label="Learner's Age"
+              label="Learner's Age (in years)"
               rules={[{ required: true, message: "Age of Learner is required" }]}
             >
               <Input />

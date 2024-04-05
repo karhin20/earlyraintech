@@ -52,7 +52,9 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h4 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Early Rain Tech.
+            <Link to="/" style={{ color: "black", textDecoration: "none" }}>
+                <i className="ri-pantone-line"></i> Early Rain Tech.
+              </Link>
             </h4>
 
             <div className="follows">

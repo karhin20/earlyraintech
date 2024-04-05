@@ -17,8 +17,8 @@ const navLinks = [
     url: "/courses",
   },
   {
-    display: "Pages",
-    url: "/pages",
+    display: "Payments",
+    url: "/payments",
   },
   {
     display: "Blog",
