@@ -13,8 +13,8 @@ const FreeCourseCard = (props) => {
       <div className="free__course__img mb-5">
         <motion.img
         ref={ref}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
           transition={{ duration: 1, delay: 0.5 }}
           src={imgUrl} alt="" className="w-100" 
         />

@@ -16,9 +16,9 @@ const CoursesList = () => {
               </div>
             </div>
             <div style={{paddingTop: "20px"}} className="course__top__left w-50">
-              <h6 className="">
+              <span><h6 className="">
                 <b>Select a course for details or enroll staright away</b>
-              </h6>
+              </h6></span>
             </div>
           </Col>
           {coursesData.map((item) => (

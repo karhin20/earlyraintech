@@ -19,8 +19,8 @@ const CourseCard = (props) => {
       <div className="course__img">
           <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
           <motion.img
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
             transition={{ duration: 1, delay: 0.5 }}
             src={imgUrl} alt="" className="w-100"
           />

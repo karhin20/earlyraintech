@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./choose-us.css";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
+
 
 const ChooseUs = () => {
   return (

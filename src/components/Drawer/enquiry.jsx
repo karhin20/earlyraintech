@@ -1,6 +1,8 @@
 import { useCallback } from "react";
 import { Button, Form, Input, notification} from "antd";
 
+
+
 const CustomGoogleForms = ({setOpen}) => {
   const [form] = Form.useForm();
   const [api, contextHolder] = notification.useNotification();
@@ -9,7 +11,7 @@ const CustomGoogleForms = ({setOpen}) => {
     async ({ messengersname,  phone, email, message }) => {
       try {
         await fetch(
-          "https://docs.google.com/forms/d/e/1FAIpQLSekcFxl9i8-nm6SMXRNWRw3zUM7-Q_GRdcsDN0-M5vUBqKKNg/formResponse?" +
+          `${process.env.ENQUIRY_APP_API_ENDPOINT}?` +
             new URLSearchParams({
               "entry.816546240": messengersname,
               "entry.1386233045": phone,
@@ -83,7 +85,7 @@ const CustomGoogleForms = ({setOpen}) => {
               <Input.TextArea />
             </Form.Item>
 
-            <Button type="primary" htmlType="submit">
+            <Button style={{ color: 'black', backgroundColor: "#61dafb" }} type="primary" htmlType="submit">
               Submit
             </Button>
           </Form>

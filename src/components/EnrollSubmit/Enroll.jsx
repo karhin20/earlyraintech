@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer"
 import "./enroll.css"
 
 
+
 const CustomGoogleForms = () => {
   const [form] = Form.useForm();
   const [api, contextHolder] = notification.useNotification();
@@ -14,7 +15,7 @@ const CustomGoogleForms = () => {
     async ({ learner, learnername, age, country, email, phone, course, classtype }) => {
       try {
         await fetch(
-          "https://docs.google.com/forms/d/e/1FAIpQLSdYEuZmv4AGpvnNuRU7sXlWy18WMdkHx4yb1Y1RhZEDPjq2Qw/formResponse?" +
+          `${process.env.REACT_APP_FORM_API_ENDPOINT}?` +
             new URLSearchParams({
               "entry.945611636": learner,
               "entry.2005620554": learnername,
@@ -45,6 +46,8 @@ const CustomGoogleForms = () => {
     },
     [api, form]
   );
+
+console.log(process.env);
 
   return (
     <>

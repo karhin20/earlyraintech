@@ -21,10 +21,15 @@ const AboutUs = () => {
 
           <Col lg="6" md="6" gap-6>
             <div className="about__content">
-              <h3>About Us</h3>
+              <motion.h3
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 30 }}
+                transition={{ duration: 1 }}
+              >
+                About Us</motion.h3>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
                 transition={{ duration: 1 }}
               >
                 Embark on a journey of knowledge and skill development with <strong>Early Rain Tech. </strong>
