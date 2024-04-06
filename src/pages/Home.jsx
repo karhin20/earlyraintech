@@ -16,10 +16,19 @@ import Footer from "../components/Footer/Footer";
 import DrawerIcon from "../components/Drawer/drawer";
 
 const Home = () => {
+
+ const styles = {
+    container: {
+      maxWidth: "100%",
+      padding: "0 20px", // Adjust padding as needed
+      boxSizing: "border-box",
+    },
+  };
   return (
     <Fragment>
       <Header />
       <DrawerIcon />
+      <div style={styles.container}>
       <HeroSection />
       <CompanySection />
       <AboutUs />
@@ -30,6 +39,7 @@ const Home = () => {
       <Testimonials />
       <Newsletter /> 
       <Footer />
+      </div>
     </Fragment>
   );
 };

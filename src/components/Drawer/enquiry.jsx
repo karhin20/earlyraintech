@@ -11,7 +11,7 @@ const CustomGoogleForms = ({setOpen}) => {
     async ({ messengersname,  phone, email, message }) => {
       try {
         await fetch(
-          `${process.env.ENQUIRY_APP_API_ENDPOINT}?` +
+          `${process.env.REACT_APP_API_ENDPOINT}?` +
             new URLSearchParams({
               "entry.816546240": messengersname,
               "entry.1386233045": phone,

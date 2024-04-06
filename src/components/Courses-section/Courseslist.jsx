@@ -15,10 +15,10 @@ const CoursesList = () => {
                 <button className="btn">All Courses</button>
               </div>
             </div>
-            <div style={{paddingTop: "20px"}} className="course__top__left w-50">
-              <span><h6 className="">
-                <b>Select a course for details or enroll staright away</b>
-              </h6></span>
+            <div style={{paddingTop: "20px"}} className="course__top__left">
+              <h6 className="">
+                <b>Select a course for details or enroll straight away</b>
+              </h6>
             </div>
           </Col>
           {coursesData.map((item) => (

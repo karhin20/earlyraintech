@@ -4,6 +4,8 @@ import FullscreenSection from "./FullScreenSection"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./enroll.css"
+import registerImg from "../../assests/images/register.png"
+import ScrollToTopOnMount from "../../pages/ScrolltoTop";
 
 
 
@@ -47,12 +49,13 @@ const CustomGoogleForms = () => {
     [api, form]
   );
 
-console.log(process.env);
+
 
   return (
     <>
       {contextHolder}
       <Header />
+      <ScrollToTopOnMount />
       <Row style={{ display: "flex", flexDirection: "row" }} className= "align-items-center justify-content-space-between">
         <Col lg={10}  className="d-flex align-items-left" style={{ order: 2}}>
           <FullscreenSection>
@@ -149,7 +152,7 @@ console.log(process.env);
               </Radio.Group>
             </Form.Item>
 
-            <Button type="primary" htmlType="submit">
+            <Button style={{ color: 'black', backgroundColor: "#61dafb" }} type="primary" htmlType="submit">
               Submit
             </Button>
           </Form>
@@ -157,7 +160,7 @@ console.log(process.env);
         </Col>
         <Col lg={14} className= "align-items-center">
         <div className="enroll-img">
-          <img src="https://i.imgur.com/q3NcLTG.png" alt="learn coding now" style={{ width: "100%", maxWidth: "800px"}}/>
+          <img src={registerImg} alt="learn coding now" style={{ width: "100%", maxWidth: "800px"}}/>
         </div>
         </Col>
       </Row>
