@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
+import { Container, Row, Col, ListGroupItem } from 'reactstrap';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { coursesData } from "../../assests/CourseData";
@@ -31,7 +31,12 @@ const CourseDetails = () => {
                   <p1>{course.Description}</p1>
                 </div>
                 <div>
-                <ReactPlayer url={course.videourl} controls />
+                <ReactPlayer
+                  url={course.videourl}
+                  controls
+                  width="100%"
+                  height="350px"
+                />
                 </div>
               </Col>
               <Col className="lesson gap-5">

@@ -17,7 +17,7 @@ const Courses = () => {
               <div className="course__top__left w-50">
                 <h2>Our Popular Courses</h2>
                 <p>
-                  Upgrade your Sills now. Select a course to enroll
+                  Upgrade your Sills now. <b>Select a course for details or enroll staright away</b>
                 </p>
               </div>
 

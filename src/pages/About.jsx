@@ -5,13 +5,15 @@ import Footer from "../components/Footer/Footer";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Testimonials from "../components/Testimonial/Testimonials";
 import ScrollToTopOnMount from "./ScrolltoTop";
+import DrawerIcon from "../components/Drawer/drawer"
 
 
 
 const About = () => {
     return (
       <Fragment>
-        <Header /> 
+        <Header />
+        <DrawerIcon /> 
         <ScrollToTopOnMount />            
         <AboutUs/>
         <Testimonials />

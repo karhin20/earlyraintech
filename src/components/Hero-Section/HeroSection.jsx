@@ -1,16 +1,21 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import heroImg from "../../assests/images/hero-img1.png";
 import "./hero-section.css";
 
 const HeroSection = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1, 
+  });
   return (
     <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
+    ref={ref}
+    initial={{ opacity: 0, y: 70 }}
+    animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 70 }}
+    transition={{ duration: 1 }}
+  >
       <Container>
         <Row>
           <Col lg="6" md="6">
@@ -24,7 +29,7 @@ const HeroSection = () => {
                 At your convenience <br /> Learn on your <br /> Suitable Schedule
               </h2>
               <p className="mb-5">
-                Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suit your <br/> interest or that of your ward! <br />
+                Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suite your <br/> interest or that of your ward! <br />
               </p>
             </motion.div>
             <motion.div

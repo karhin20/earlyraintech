@@ -65,7 +65,7 @@ const CustomGoogleForms = () => {
           
             <Form.Item
               name="learner"
-              label="Are you registering for a Learner?"
+              label="Are you registering as a Learner?"
               rules={[{ required: true, message: "This question is must be answered"}]}
             >
               <Radio.Group>

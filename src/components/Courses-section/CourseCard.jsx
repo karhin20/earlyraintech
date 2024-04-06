@@ -1,23 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const CourseCard = (props) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
+  const [ref, inView] = useInView({
+    threshold: 0.1, 
+  });
 
   return (
     <motion.div
+      ref={ref}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="single__course__item"
     >
       <div className="course__img">
           <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
-          <motion.img 
+          <motion.img
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
             transition={{ duration: 1, delay: 0.5 }}
-            src={imgUrl} alt="" className="w-100" />
+            src={imgUrl} alt="" className="w-100"
+          />
           </Link>
       </div>
 

@@ -18,11 +18,11 @@ const navLinks = [
   },
   {
     display: "Payments",
-    url: "/payments",
+    url: "/",
   },
   {
     display: "Blog",
-    url: "/blog",
+    url: "/",
   },
 ];
 

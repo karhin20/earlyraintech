@@ -6,11 +6,13 @@ import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
 import ScrollToTopOnMount from "./ScrolltoTop";
+import DrawerIcon from "../components/Drawer/drawer"
 
 const Courses = () => {
   return (
     <Fragment>
       <Header />
+      <DrawerIcon />
       <ScrollToTopOnMount />            
       <CoursesList />
       <FreeCourse />

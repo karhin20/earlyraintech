@@ -12,28 +12,32 @@ const ChooseUs = () => {
         <Col lg="6" md="6">
             <div className="choose__content">
               <h2>Why Choose Us</h2>
-              <motion.ul
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.0 }}
-                className="fade-in-list"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+               
               >
-                <motion.li>
-                  Tailored Groups: Learners are grouped by age and coding skills level. We have One on One lesson too.
-                </motion.li>
-                <motion.li>
-                  Real Projects: Courses focus on practical, project-based learning.
-                </motion.li>
-                <motion.li>
-                  Live & Recorded Lessons: Flexible learning with live Q&A sessions and recorded videos.
-                </motion.li>
-                <motion.li>
-                  Beginner Support: We guide beginners through the entire learning process.
-                </motion.li>
-                <motion.li>
-                  Rich Resources: Access extensive resources for deeper understanding.
-                </motion.li>
-              </motion.ul>
+                <ul>
+                  <motion.li>
+                    <b>Tailored Groups:</b> Learners are grouped by age and coding skills level. We have One on One lesson too.
+                  </motion.li>
+                  <motion.li>
+                    <b>Real Projects:</b> Courses focus on practical, project-based learning.
+                  </motion.li>
+                  <motion.li>
+                    <b>Live & Recorded Lessons:</b> Flexible learning with live Q&A sessions and recorded videos.
+                  </motion.li>
+                  <motion.li>
+                    <b>Beginner Support:</b> We guide beginners through the entire learning process.
+                  </motion.li>
+                  <motion.li>
+                    <b>Rich Resources:</b> Access extensive resources for deeper understanding.
+                  </motion.li>
+                </ul>
+              </motion.div>
               <p>Choose us for personalized tech learning that suits your needs.</p>
             </div>
           </Col>

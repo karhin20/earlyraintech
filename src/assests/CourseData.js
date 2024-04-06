@@ -30,7 +30,7 @@ export const coursesData = [
     "id": "02",
     "title": "Scratch (Recommended for Juniors)",
     "lesson": 16,
-    "Requirements": "Computer and Internet connection",
+    "Requirements": "Computer and internet connection",
     "difficulty": "Beginner Level",
     "students": 105,
     "rating": 4.5,

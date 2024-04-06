@@ -1,12 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FreeCourseCard = (props) => {
   const { imgUrl, title, students, rating } = props.item;
+  const [ref, inView] = useInView({
+    threshold: 0.1, 
+  })
 
   return (
     <div className="single__free__course">
       <div className="free__course__img mb-5">
-        <img src={imgUrl} alt="" className="w-100" />
+        <motion.img
+        ref={ref}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          src={imgUrl} alt="" className="w-100" 
+        />
         <button className="btn free__btn">Free</button>
       </div>
 
