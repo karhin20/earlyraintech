@@ -51,7 +51,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                        Hands-On Projects
                       </h6>
                       <p>
                         
@@ -70,7 +70,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                        Real-World Applications
                       </h6>
                       <p>
                         "This platform's real-world applications enhanced my 

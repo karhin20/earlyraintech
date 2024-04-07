@@ -20,7 +20,7 @@ const Home = () => {
  const styles = {
     container: {
       maxWidth: "100%",
-      padding: "0 5px", 
+      padding: "0 8px", 
       boxSizing: "border-box",
     },
   };
