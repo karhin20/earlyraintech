@@ -26,7 +26,7 @@ const CourseDetails = () => {
           <Container>
             <Row>
               <h2 style={{ paddingTop: "100px" }}>{course.title}</h2>
-              <Col>
+              <Col lg={8} md={12}>
                 <div>
                   <p1>{course.Description}</p1>
                 </div>
@@ -39,7 +39,7 @@ const CourseDetails = () => {
                 />
                 </div>
               </Col>
-              <Col className="lesson gap-5">
+              <Col lg={4} md={12} className="lesson gap-5">
                 <div>
                   <div>
                    <h5> <i class="ri-book-open-line"> </i> {course.lesson} Lessons </h5>

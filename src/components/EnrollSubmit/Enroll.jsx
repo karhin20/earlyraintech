@@ -66,7 +66,7 @@ const CustomGoogleForms = () => {
             onFinish={onFinish}
             className=" form-container"
           >
-          <h4 style={{ paddingTop: '40px'}}>Enroll in Course</h4>
+          <h4 style={{ paddingTop: '40px'}}>Enroll in a Course</h4>
           <p style={{ paddingBottom: '40px'}}>Kindly fill this accurately. We will contact you shortly!</p>
           
             <Form.Item
