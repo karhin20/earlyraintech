@@ -14,7 +14,7 @@ export const coursesData = [
     "title": "Web Development for Beginners",
     "lesson": 18,
     "students": 125,
-    "Requirements": "Computer and Internet connection",
+    "Requirements": "Computer and Internet",
     "difficulty": "Beginner Level",
     "rating": 4.6,
     "imgUrl": courseImg1,

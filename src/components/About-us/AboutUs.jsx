@@ -13,7 +13,7 @@ const AboutUs = () => {
     <section ref={ref}>
       <Container>
         <Row>
-          <Col lg="6" md="6">
+        <Col lg="6" md="6" className="mb-4 mb-md-0">
             <div className="about__img">
               <img src={aboutImg} alt="" className="w-100" />
             </div>
