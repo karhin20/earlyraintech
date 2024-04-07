@@ -57,7 +57,7 @@ const CustomGoogleForms = () => {
       <Header />
       <ScrollToTopOnMount />
       <Row style={{ display: "flex", flexDirection: "row" }} className= "align-items-center justify-content-space-between">
-        <Col lg={10}  className="d-flex align-items-left" style={{ order: 2}}>
+        <Col lg={10} md={12} className="d-flex align-items-left" style={{ order: 2}}>
           <FullscreenSection>
 
           <Form
@@ -158,7 +158,7 @@ const CustomGoogleForms = () => {
           </Form>
           </FullscreenSection>
         </Col>
-        <Col lg={14} className= "align-items-center">
+        <Col lg={14} md={12} className= "align-items-center">
         <div className="enroll-img">
           <img src={registerImg} alt="learn coding now" style={{ width: "100%", maxWidth: "800px"}}/>
         </div>
