@@ -26,9 +26,9 @@ const Home = () => {
   };
   return (
     <Fragment>
+      <div style={styles.container}>
       <Header />
       <DrawerIcon />
-      <div style={styles.container}>
       <HeroSection />
       <CompanySection />
       <AboutUs />
