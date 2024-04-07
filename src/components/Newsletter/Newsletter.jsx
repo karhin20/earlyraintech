@@ -7,8 +7,8 @@ const Newsletter = () => {
     <section>
       <Container className="newsletter">
         <Row>
-          <Col lg="12" className="text-center">
-            <h2 className="mb-4">Subscribe Our Newsletter</h2>
+          <Col lg="12" md={12} className="text-center">
+            <h2 className="mb-4">Subscribe to Our Newsletter</h2>
             <div className="subscribe">
               <input type="text" placeholder="Email" />
               <button className="btn">Subscribe</button>
