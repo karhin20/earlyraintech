@@ -1,3 +1,11 @@
 .testimonial__content h2 {
   font-weight: 600;
 }
+
+
+/* testimonial.css */
+.testimonial__img img {
+  /* Scale down the image to 80% of its original size; adjust as needed */
+  transform: scale(0.7);
+  transform-origin: center; /* Ensures the scaling is centered */
+}

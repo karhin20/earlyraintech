@@ -1,12 +1,12 @@
 import courseImg1 from "./images/web-design.png"
 import courseImg2 from "./images/scratch.png"
-import courseImg3 from "./images/ui-ux.png"
+import courseImg3 from "./images/python.jpeg"
 
 ///freecourses
 import courseImg01 from "./images/web-development.png"
-import courseImg02 from "./images/kids-learning.png"
+import courseImg02 from "./images/git.jpeg"
 import courseImg03 from "./images/seo.png"
-import courseImg04 from "./images/ui-ux.png"
+import courseImg04 from "./images/uiux.jpeg"
 
 export const coursesData = [
   {
