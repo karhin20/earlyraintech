@@ -7,10 +7,11 @@ import "./hero-section.css";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-// Assuming you have multiple hero images
+
 import heroImg1 from "../../assests/images/hero.jpeg";
 import heroImg2 from "../../assests/images/hero1.jpeg";
 import heroImg3 from "../../assests/images/hero3.jpeg";
+import heroImg4 from "../../assests/images/hero-img1.png"
 
 const HeroSection = () => {
   const [ref, inView] = useInView({
@@ -24,7 +25,7 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
   };
 
   return (
@@ -37,12 +38,26 @@ const HeroSection = () => {
       <Container>
         <Row>
           <Col lg="6" md="6">
+          <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+
           <h2 className="mb-4 hero__title">
                 At your convenience <br /> Learn on your <br /> Suitable Schedule
               </h2>
               <p className="mb-5">
                 Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suite your <br/> interest or that of your ward! <br />
               </p>
+     </motion.div>
+             <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+              <p>Unsure of the course to select? <br/>Get in touch. <br/><b>We will help you choose.</b> </p>
+            </motion.div>
           </Col>
 
           <Col lg="6" md="6">
@@ -71,7 +86,14 @@ const HeroSection = () => {
                   className="w-100 hero__img"
                 />
               </div>
-              {/* Add more images as needed */}
+              <div>
+                <motion.img
+                  src={heroImg4}
+                  alt=""
+                  className="w-100 hero__img"
+                />
+              </div>
+              {/*more images */}
             </Slider>
           </Col>
         </Row>

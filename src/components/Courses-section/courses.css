@@ -1,5 +1,6 @@
 .single__course__item {
-  padding: 15px;
+  padding: 25px;
+  
 }
 
 .course__img img {
@@ -23,6 +24,7 @@
   font-size: 0.9rem;
   color: #0a2b1e;
   font-weight: 500;
+  line-height: 5%;
 }
 
 .lesson i,
@@ -33,8 +35,9 @@
 
 .course__title {
   font-weight: 600;
-  line-height: 2rem;
+  line-height: 1rem;
 }
+
 
 .course__top__left h2 {
   font-weight: 600;

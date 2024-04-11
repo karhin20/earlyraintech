@@ -1,11 +1,11 @@
 import courseImg1 from "./images/web-design.png"
 import courseImg2 from "./images/scratch.png"
-import courseImg3 from "./images/python.jpeg"
+import courseImg3 from "./images/code.jpeg"
 
 ///freecourses
 import courseImg01 from "./images/web-development.png"
-import courseImg02 from "./images/git.jpeg"
-import courseImg03 from "./images/seo.png"
+import courseImg02 from "./images/git2.jpeg"
+import courseImg03 from "./images/graphicDesign.jpg"
 import courseImg04 from "./images/uiux.jpeg"
 
 export const coursesData = [
@@ -17,7 +17,7 @@ export const coursesData = [
     "Requirements": "Computer and Internet",
     "difficulty": "Beginner Level",
     "rating": 4.6,
-    "imgUrl": courseImg1,
+    "imgUrl": courseImg3,
     "videourl": "https://example.com/web_development_intro_video",
     "Description": "This course covers the fundamentals of web development including HTML, CSS, and JavaScript.",
     "Course related projects to be completed": [
@@ -51,7 +51,7 @@ export const coursesData = [
     "difficulty": "Beginner Level",
     "students": 101,
     "rating": 4.8,
-    "imgUrl": courseImg3,
+    "imgUrl": courseImg01,
     "videourl": "https://example.com/python_intro_video",
     "Description": "This course provides an introduction to Python programming language covering basic syntax, data types, and control structures.",
     "Course related projects to be completed": [
@@ -67,7 +67,7 @@ export const freeCourseData = [
     id: "01",
     title: " Introduction to HTML/CSS",
     Requirements: "Computer and Internet connection",
-    imgUrl: courseImg01,
+    imgUrl: courseImg1,
     students: 73,
     rating: 4.7,
   },

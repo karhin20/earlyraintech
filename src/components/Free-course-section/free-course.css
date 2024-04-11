@@ -1,3 +1,14 @@
+
+.single__free__course {
+
+}
+
+@media (max-width: 768px) {
+  .single__free__course {
+    padding: 20px; 
+  }
+}
+
 .free__course__img {
   position: relative;
   width: 100%;
@@ -22,13 +33,12 @@
 
 .free__course__details h6 {
   font-weight: 600;
-  line-height: 2rem;
+  line-height:  0rem;
 }
 
 .free__course__img img {
-  border-radius: 10px;
-  margin-bottom: 20px;
-  height: 200px;
+
+  height: 100%;
   width: 300px;
   object-fit: cover;
 }
