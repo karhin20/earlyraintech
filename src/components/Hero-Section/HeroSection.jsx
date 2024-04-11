@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import heroImg1 from "../../assests/images/hero-img1.jpeg";
+import heroImg1 from "../../assests/images/hero.jpg";
 import heroImg2 from "../../assests/images/hero1.jpg";
 import heroImg3 from "../../assests/images/hero3.jpg";
 import heroImg4 from "../../assests/images/hero4.jpg"
