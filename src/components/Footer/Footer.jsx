@@ -19,8 +19,8 @@ const footerQuickLinks = [
   },
 
   {
-    display: "Blog",
-    url: "/blog",
+    display: "Payments",
+    url: "/payments",
   },
 ];
 

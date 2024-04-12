@@ -9,7 +9,7 @@ export default function DrawerIcon() {
     <>
       <FloatButton
         icon={<QuestionCircleOutlined />}
-        description=""
+        description="Ask Us"
         type=""
         onClick={() => setOpen(true)}
         style={{ backgroundColor: "#3ba38e", width: 60, height: 60, bottom: 24, right: 15, zIndex: 999 }}

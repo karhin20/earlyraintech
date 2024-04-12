@@ -18,7 +18,7 @@ const navLinks = [
   },
   {
     display: "Payments",
-    url: "/",
+    url: "/payments",
   },
   {
     display: "Blog",
