@@ -9,11 +9,12 @@ import DrawerIcon from "../components/Drawer/drawer"
 
 
 
+
 const About = () => {
     return (
       <Fragment>
-        <Header />
-        <DrawerIcon /> 
+        <DrawerIcon />
+        <Header /> 
         <ScrollToTopOnMount />            
         <AboutUs/>
         <Testimonials />

@@ -6,6 +6,7 @@ import "./payment.css";
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer";
 import DrawerIcon from "../../components/Drawer/drawer"
+import ScrollToTopOnMount from "../ScrolltoTop";
 
 const { Option } = Select;
 
@@ -58,6 +59,7 @@ const Payments = () => {
     <div style={noOverflow.container}>
     <Header/>
     <DrawerIcon/>
+    <ScrollToTopOnMount/>
     <Row gutter={16}>
       <Col lg={12} md={12} className="align-items-center">
         <img src={paymentsImg} alt="learn coding now" className="payment-img" style={{ width: "100%", maxWidth: "600px"}} />
