@@ -51,6 +51,8 @@ const Payments = () => {
       maxWidth: "100%",
       padding: "0 0px", 
       boxSizing: "border-box",
+      overflowX: "hidden"
+
     },
   };
 
@@ -65,7 +67,7 @@ const Payments = () => {
         <img src={paymentsImg} alt="learn coding now" className="payment-img" style={{ width: "100%", maxWidth: "600px"}} />
       </Col>
       <Col lg={12} md={12}>
-        <div className="paymentform-container" style={{ padding: "40px 20px " }}>
+        <div className="paymentform-container">
           <div>
            <h6>Kindly provide your details</h6> 
            </div>

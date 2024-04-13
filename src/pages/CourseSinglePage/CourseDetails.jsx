@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { coursesData } from "../../assests/CourseData";
 import ReactPlayer from 'react-player';
+import "./coursedetails.css"
 
 const CourseDetails = () => {
   const { title } = useParams();
@@ -30,13 +31,22 @@ const CourseDetails = () => {
                 <div>
                   <p1>{course.Description}</p1>
                 </div>
-                <div>
+                <div className='player-wrapper'>
                 <ReactPlayer
+                  className='react-player'
                   url={course.videourl}
                   controls
-                  width="100%"
-                  height="350px"
+                  width='100%'
+                  height='100%'
                 />
+                </div>
+                <div >
+                    <h5>
+                      <Link to="/enroll">
+                        <button className="course-btn">Enroll Now</button>
+                      </Link>
+                    </h5>
+                    
                 </div>
               </Col>
               <Col lg={4} md={12} className="lesson gap-5">
@@ -53,13 +63,6 @@ const CourseDetails = () => {
                   <div>
                     <h5><i class="ri-computer-fill"></i> {course.Requirements}</h5>
                   </div>
-                  <div>
-                    <h5>
-                      <Link to="/enroll">
-                        <button className="course-btn">Enroll Now</button>
-                      </Link>
-                    </h5>
-                </div>
                 <div>
                     <h5><i class="ri-code-s-slash-fill" ></i> {course.difficulty}</h5>
                 </div>

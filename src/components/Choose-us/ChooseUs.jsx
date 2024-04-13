@@ -45,8 +45,7 @@ const ChooseUs = () => {
 
           <Col lg="6" md="6">
             <div className="choose__img">
-            
-                <ReactPlayer
+                 <ReactPlayer
                   url="https://www.youtube.com/watch?v=vQPgEm9jAJI"
                   controls
                   width="100%"
