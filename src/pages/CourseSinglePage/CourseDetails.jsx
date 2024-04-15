@@ -46,7 +46,7 @@ const CourseDetails = () => {
                         <button className="course-btn">Enroll Now</button>
                       </Link>
                     </h5>
-                    
+                    <h5><i class="ri-wallet-3-line"></i></h5>
                 </div>
               </Col>
               <Col lg={4} md={12} className="lesson gap-5">
