@@ -45,10 +45,13 @@ const HeroSection = () => {
             >
 
           <h2 className="mb-4 hero__title">
-                Learn Coding Now <br /> Online or Home Lessons <br /> Different Skills and Age Groups
+                Learn Coding Now <br /> Online or Home Lessons <br /> Individual and Group Lessons
               </h2>
               <p className="mb-5">
                 Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suite your <br/> interest or that of your ward! <br />
+              </p>
+              <p className="mb-5">
+                Learners are categorized <strong>Age Groups <br/> Skill Levels </strong> 
               </p>
      </motion.div>
              <motion.div
