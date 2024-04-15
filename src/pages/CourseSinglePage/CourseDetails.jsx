@@ -40,7 +40,7 @@ const CourseDetails = () => {
                   height='100%'
                 />
                 </div>
-                <div >
+                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
                     <h5>
                       <Link to="/enroll">
                         <button className="course-btn">Enroll Now</button>
@@ -50,7 +50,7 @@ const CourseDetails = () => {
                 </div>
               </Col>
               <Col lg={4} md={12} className="lesson gap-5">
-                <div>
+                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
                   <div>
                    <h5> <i class="ri-book-open-line"> </i> {course.lesson} Lessons </h5>
                   </div>
