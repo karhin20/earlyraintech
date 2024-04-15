@@ -48,7 +48,7 @@ const HeroSection = () => {
                 Learn Coding Now <br />At your convenience <br/> Online or Home <br />
               </h2>
               <p className="mb-5">
-                Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suite your <br/> interest or that of your ward! <br />
+                Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses
               </p>
               <p className="mb-5">
               <strong>One 0n One </strong>and <br/> <strong>Group lessons</strong> are available  
