@@ -21,7 +21,7 @@ const navLinks = [
     url: "/payments",
   },
   {
-    display: "Blog",
+    display: "Careers",
     url: "/",
   },
 ];

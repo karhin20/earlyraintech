@@ -23,7 +23,7 @@ const Company = () => {
             whileHover={{ textDecoration: "underline" }}
             className="contact-item"
             >
-              <a href="mailto:earlyraintech@gmail.com" style={{ color: "black", textDecoration: "none" }}>example@gmail.com</a>
+              <a href="mailto:earlyraintech@gmail.com" style={{ color: "black", textDecoration: "none" }}>earlyraintech@gmail.com</a>
             </motion.div>
           </Col>
           <Col lg="4" md="4" sm="4" xs="12" className="d-flex justify-content-center">
