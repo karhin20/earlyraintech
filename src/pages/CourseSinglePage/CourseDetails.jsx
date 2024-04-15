@@ -28,7 +28,7 @@ const CourseDetails = () => {
             <Row>
               <h2 style={{ paddingTop: "100px" }}>{course.title}</h2>
               <Col lg={8} md={12}>
-                <div>
+                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
                   <p1>{course.Description}</p1>
                 </div>
                 <div className='player-wrapper'>
