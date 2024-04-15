@@ -51,10 +51,7 @@ const HeroSection = () => {
                 Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses to suite your <br/> interest or that of your ward! <br />
               </p>
               <p className="mb-5">
-                Learners are categorized <strong>by Age Groups or <br/> Skill Levels </strong> 
-              </p>
-              <p className="mb-5">
-              <strong>One 0n One </strong> <br/> and <strong>Group lessons</strong> are available 
+              <strong>One 0n One </strong>and <br/> <strong>Group lessons</strong> are available  
               </p>
      </motion.div>
              <motion.div
