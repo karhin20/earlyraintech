@@ -51,7 +51,7 @@ const CourseDetails = () => {
                       <ul>
                         <li>Online (Group): 400 cedis</li>
                         <li>Online (One on One): 1000 cedis</li>
-                        <li>In-person (One on One): 100 cedis</li>
+                        <li>In-person (One on One): 1800 cedis</li>
                       </ul>
                     </span>
                 </div>
