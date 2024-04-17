@@ -15,8 +15,8 @@ const Payments = () => {
   const publicKey = "pk_live_92724b6cc38ee034d81248f30e21acd8363f14e7";
   const currency = "GHS";
 
-
-  const [email, setEmail] = useState('');
+  const defaultEmail = "earlyraintech@gmail.com"
+  const [email, setEmail] = useState('defaultEmail');
   const [amount, setAmount] = useState(0); 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
