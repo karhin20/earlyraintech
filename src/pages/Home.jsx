@@ -22,6 +22,7 @@ const Home = () => {
       maxWidth: "100%",
       padding: "0 8px", 
       boxSizing: "border-box",
+      overflowX: "hidden"
     },
   };
   return (

@@ -9,8 +9,19 @@ import ScrollToTopOnMount from "./ScrolltoTop";
 import DrawerIcon from "../components/Drawer/drawer"
 
 const Courses = () => {
+
+  const styles = {
+    container: {
+      maxWidth: "100%",
+      padding: "0 8px", 
+      boxSizing: "border-box",
+      overflowX: "hidden"
+    },
+  };
+
   return (
     <Fragment>
+      <div style={styles.container}>
       <Header />
       <DrawerIcon />
       <ScrollToTopOnMount />            
@@ -19,6 +30,7 @@ const Courses = () => {
       <Testimonials />
       <Newsletter />
       <Footer />
+      </div>
     </Fragment>
   );
 };

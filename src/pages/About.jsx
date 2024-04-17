@@ -11,8 +11,19 @@ import DrawerIcon from "../components/Drawer/drawer"
 
 
 const About = () => {
+
+  const styles = {
+    container: {
+      maxWidth: "100%",
+      padding: "0 8px", 
+      boxSizing: "border-box",
+      overflowX: "hidden"
+    },
+  };
+
     return (
       <Fragment>
+        <div style={styles.container}>
         <DrawerIcon />
         <Header /> 
         <ScrollToTopOnMount />            
@@ -20,6 +31,7 @@ const About = () => {
         <Testimonials />
         <Newsletter />
         <Footer />
+        </div>
       </Fragment>
     );
   };

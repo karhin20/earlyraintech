@@ -71,7 +71,7 @@ const Payments = () => {
           <div>
            <h6>Kindly provide your details</h6> 
            </div>
-           <div><p1>All Payments are secured by <strong>Paystack</strong></p1></div>
+           <div><p1>All Payments are secured by <strong><em>Paystack</em></strong></p1></div>
           <Form 
             form={form}
             layout="vertical"
