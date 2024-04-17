@@ -115,7 +115,7 @@ const Payments = () => {
             >
               <Select>
                 <Option value="" disabled>Select Course Type</Option>
-                <Option value="500">Online</Option>
+                <Option value="400">Online</Option>
                 <Option value="1000">Online-One on One</Option>
                 <Option value="1800">In-person-One on One</Option>
               </Select>
