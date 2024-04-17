@@ -40,7 +40,7 @@ const CourseDetails = () => {
                   height='100%'
                 />
                 </div>
-                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
+                <div style={{paddingTop: "30px", paddingBottom: "30px"}}>
                     <h5>
                       <Link to="/enroll">
                         <button className="course-btn">Enroll Now</button>

@@ -12,7 +12,7 @@ const FreeCourseCard = (props) => {
   return (
     <div className="single__free__course">
       <div className="free__course__img mb-5">
-      <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <Link to={`/free-courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
       <motion.img
         ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -25,7 +25,7 @@ const FreeCourseCard = (props) => {
       </div>
 
       <div className="free__course__details">
-      <Link to={`/courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <Link to={`/free-courses/${props.item.title}`} style={{ textDecoration: "none", color: "inherit" }}>
         <h6>{title}</h6>
       </Link>
         <div className=" d-flex align-items-center gap-5">
