@@ -1,4 +1,6 @@
-// Service Worker
+ /* eslint-disable no-restricted-globals */
+// Service Worker code here
+
 import { precacheAndRoute } from 'workbox-precaching';
 
 // Declare self as a global variable
