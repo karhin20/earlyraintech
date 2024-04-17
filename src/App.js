@@ -52,7 +52,7 @@ function App() {
         <Route path='/enroll' element={<Register />}/>
         <Route path="/about" element={<About />} />
         <Route path="/courses/:title" element={<CourseDetails />} /> 
-        <Route path="/courses/:title" element={<freeCourseDetails />} />  
+        <Route path="/free-courses/:title" element={<freeCourseDetails />} />  
       </Routes>
       <Button 
         style={{ color: 'white', backgroundColor: "#17bf9e", transform: 'scale(1.1)', transition: 'transform 0.2s' }} 
