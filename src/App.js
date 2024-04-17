@@ -2,6 +2,7 @@ import { Button } from 'antd';
 import Courses from './pages/Courses';
 import About from './pages/About';
 import CourseDetails from './pages/CourseSinglePage/CourseDetails';
+import freeCourseDetails from './pages/CourseSinglePage/freeCourseDetails';
 import Home from "./pages/Home";
 import Register from './components/EnrollSubmit/Enroll';
 import Payments from "./pages/paystacks/Payments";
@@ -17,7 +18,7 @@ function App() {
       setInstallPrompt(e);
     };
 
-    // Delay the appearance of the install prompt by 10 seconds
+  
     const timeout = setTimeout(() => {
       window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     }, 10000);
@@ -50,7 +51,8 @@ function App() {
         <Route path="/payments" element={<Payments />} />
         <Route path='/enroll' element={<Register />}/>
         <Route path="/about" element={<About />} />
-        <Route path="/courses/:title" element={<CourseDetails />} />  
+        <Route path="/courses/:title" element={<CourseDetails />} /> 
+        <Route path="/courses/:title" element={<freeCourseDetails />} />  
       </Routes>
       <Button 
         style={{ color: 'white', backgroundColor: "#17bf9e", transform: 'scale(1.1)', transition: 'transform 0.2s' }} 
