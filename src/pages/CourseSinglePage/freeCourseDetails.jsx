@@ -7,7 +7,7 @@ import { freeCourseData } from "../../assests/CourseData";
 import ReactPlayer from 'react-player';
 import "./coursedetails.css"
 
-const CourseDetails = () => {
+const freeCourseDetails = () => {
   const { title } = useParams();
   const [course, setCourse] = useState(null);
 
@@ -87,4 +87,4 @@ const CourseDetails = () => {
   );
 }
 
-export default CourseDetails;
+export default freeCourseDetails;
