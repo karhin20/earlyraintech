@@ -9,18 +9,36 @@ import Blog from "./pages/Blog";
 import InstallButton from "./pages/InstallButton";
 import Register from './components/EnrollSubmit/Enroll';
 import Payments from "./pages/paystacks/Payments";
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import RouteChangeTracker from './pages/RouteChangeTracker';
 
 
+function PageTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
+}
+
+
+
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize('G-4F6BBX8BK6', {
+      debug: true,
+      titleCase: false,
+      gaOptions: {
+      userId: 234
+      }
+    });
+    // Additional GA4 configuration can go here
+  }, []);
+
   const [installPrompt, setInstallPrompt] = useState(null);
 
-  const TRACKING_ID = "G-4F6BBX8BK6"; 
-  ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e) => {
@@ -55,6 +73,7 @@ function App() {
 
   return (
     <BrowserRouter>
+     <PageTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
