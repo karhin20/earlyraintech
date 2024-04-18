@@ -24,6 +24,10 @@ const navLinks = [
     display: "Careers",
     url: "/careers",
   },
+  {
+    display: "Blog",
+    url: "/blog",
+  },
 ];
 
 const Header = () => {

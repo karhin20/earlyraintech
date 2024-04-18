@@ -5,6 +5,7 @@ import CourseDetails from './pages/CourseSinglePage/CourseDetails';
 import FreeCourseDetails from './pages/CourseSinglePage/freeCourseDetails';
 import Home from "./pages/Home";
 import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
 import InstallButton from "./pages/InstallButton";
 import Register from './components/EnrollSubmit/Enroll';
 import Payments from "./pages/paystacks/Payments";
@@ -17,8 +18,9 @@ import RouteChangeTracker from './pages/RouteChangeTracker';
 
 function App() {
   const [installPrompt, setInstallPrompt] = useState(null);
+
   const TRACKING_ID = "G-4F6BBX8BK6"; 
-ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e) => {
@@ -62,6 +64,7 @@ ReactGA.initialize(TRACKING_ID);
         <Route path="/courses/:title" element={<CourseDetails />} /> 
         <Route path="/enroll" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       <InstallButton onInstallClick={handleInstallClick} />
       <RouteChangeTracker />
