@@ -12,7 +12,7 @@ export default function DrawerIcon() {
         description="Ask Us"
         type=""
         onClick={() => setOpen(true)}
-        style={{ backgroundColor: "#3ba38e", width: 60, height: 60, bottom: 24, right: 15, zIndex: 999 }}
+        style={{ backgroundColor: "#3ba38e", Color: "white", width: 60, height: 60, bottom: 24, right: 15, zIndex: 999 }}
       />
       <Drawer
         title="Contact Us"

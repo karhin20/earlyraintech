@@ -2,11 +2,13 @@ import { Button } from 'antd';
 import Courses from './pages/Courses';
 import About from './pages/About';
 import CourseDetails from './pages/CourseSinglePage/CourseDetails';
-import freeCourseDetails from './pages/CourseSinglePage/freeCourseDetails';
+import FreeCourseDetails from './pages/CourseSinglePage/freeCourseDetails';
 import Home from "./pages/Home";
+import Careers from "./pages/Careers";
+import InstallButton from "./pages/InstallButton";
 import Register from './components/EnrollSubmit/Enroll';
 import Payments from "./pages/paystacks/Payments";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -48,19 +50,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/payments" element={<Payments />} />
-        <Route path='/enroll' element={<Register />}/>
-        <Route path="/about" element={<About />} />
+        <Route path="/free-courses/:title" element={<FreeCourseDetails />} />  
         <Route path="/courses/:title" element={<CourseDetails />} /> 
-        <Route path="/free-courses/:title" element={<freeCourseDetails />} />  
+        <Route path="/enroll" element={<Register />} />
+        <Route path="/about" element={<About />} />
       </Routes>
-      <Button 
-        style={{ color: 'white', backgroundColor: "#17bf9e", transform: 'scale(1.1)', transition: 'transform 0.2s' }} 
-        type="primary" 
-        onClick={handleInstallClick}
-      >
-        Install App
-      </Button>
+      <InstallButton onInstallClick={handleInstallClick} />
     </BrowserRouter>
   );   
 }

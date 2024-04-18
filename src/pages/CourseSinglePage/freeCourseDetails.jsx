@@ -7,7 +7,7 @@ import { freeCourseData } from "../../assests/CourseData";
 import ReactPlayer from 'react-player';
 import "./coursedetails.css"
 
-const freeCourseDetails = () => {
+const FreeCourseDetails = () => {
   const { title } = useParams();
   const [course, setCourse] = useState(null);
 
@@ -46,7 +46,6 @@ const freeCourseDetails = () => {
                         <button className="course-btn">Enroll Now</button>
                       </Link>
                     </h5>
-                    <h5><i class="ri-wallet-3-line"></i></h5>
                 </div>
               </Col>
               <Col lg={4} md={12} className="lesson gap-5">
@@ -69,14 +68,6 @@ const freeCourseDetails = () => {
                 </div>
               </Col>
             </Row>
-              <Col>
-                <h2>Course Projects:</h2>
-                <ul>
-                  {course["Course related projects to be completed"].map((project, index) => (
-                    <ListGroupItem key={index}>{project}</ListGroupItem>
-                  ))}
-                </ul>
-              </Col>
           </Container>
           <Footer />
         </>
@@ -87,4 +78,4 @@ const freeCourseDetails = () => {
   );
 }
 
-export default freeCourseDetails;
+export default FreeCourseDetails;

@@ -65,9 +65,11 @@ export const coursesData = [
 export const freeCourseData = [
   {
     id: "01",
-    title: " Introduction to HTML/CSS",
+    title: "Introduction to HTML and CSS",
+    difficulty: "Beginner Level",
     Requirements: "Computer and Internet",
     imgUrl: courseImg1,
+    videourl: "https://example.com/scratch_intro_video",
     students: 73,
     rating: 4.7,
   },
@@ -77,6 +79,7 @@ export const freeCourseData = [
     difficulty: "Beginner Level",
     Requirements: "Computer and Internet",
     imgUrl: courseImg02,
+    videourl: "https://example.com/scratch_intro_video",
     students: 203,
     rating: 4.9,
   },
@@ -87,13 +90,16 @@ export const freeCourseData = [
     difficulty: "Beginner Level",
     Requirements: "Computer and Internet connection",
     imgUrl: courseImg03,
+    videourl: "https://example.com/scratch_intro_video",
     students: 63,
     rating: 3.5,
   },
 
   {
     id: "04",
-    title: "Basic UI/UX Design - Figma",
+    title: "Basic UI-UX Design - Figma",
+    difficulty: "Beginner Level",
+    Requirements: "Computer and Internet connection",
     imgUrl: courseImg04,
     students: 53,
     rating: 4.7,

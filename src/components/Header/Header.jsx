@@ -22,7 +22,7 @@ const navLinks = [
   },
   {
     display: "Careers",
-    url: "/",
+    url: "/careers",
   },
 ];
 
