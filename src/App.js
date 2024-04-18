@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+
 import Courses from './pages/Courses';
 import About from './pages/About';
 import CourseDetails from './pages/CourseSinglePage/CourseDetails';
@@ -10,9 +10,15 @@ import Register from './components/EnrollSubmit/Enroll';
 import Payments from "./pages/paystacks/Payments";
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './pages/RouteChangeTracker';
+
+
 
 function App() {
   const [installPrompt, setInstallPrompt] = useState(null);
+  const TRACKING_ID = "G-4F6BBX8BK6"; 
+ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e) => {
@@ -58,6 +64,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <InstallButton onInstallClick={handleInstallClick} />
+      <RouteChangeTracker />
     </BrowserRouter>
   );   
 }
