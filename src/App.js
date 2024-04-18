@@ -27,13 +27,7 @@ function PageTracker() {
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize('G-4F6BBX8BK6', {
-      debug: true,
-      titleCase: false,
-      gaOptions: {
-      userId: 234
-      }
-    });
+    ReactGA.initialize('G-4F6BBX8BK6');
     // Additional GA4 configuration can go here
   }, []);
 
