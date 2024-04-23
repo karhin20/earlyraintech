@@ -29,37 +29,37 @@ const CourseDetails = () => {
               <h2 style={{ paddingTop: "100px" }}>{course.title}</h2>
               <Col lg={8} md={12}>
                 <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
-                  <p1>{course.Description}</p1>
+                  <p>{course.Description}</p>
                 </div>
                 <div className='player-wrapper'>
-                <ReactPlayer
-                  className='react-player'
-                  url={course.videourl}
-                  controls
-                  width='100%'
-                  height='100%'
-                />
+                  <ReactPlayer
+                    className='react-player'
+                    url={course.videourl}
+                    controls
+                    width='100%'
+                    height='100%'
+                  />
                 </div>
                 <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
-                    <h5>
-                      <Link to="/enroll">
-                        <button className="course-btn">Enroll Now</button>
-                      </Link>
-                    </h5>
-                    <h5><span><i class="ri-wallet-3-line"></i></span> Fee per Month</h5>
-                    <span>
-                      <ul>
-                        <li>Online (Group): 400 cedis</li>
-                        <li>Online (One on One): 1000 cedis</li>
-                        <li>In-person (One on One): 1800 cedis</li>
-                      </ul>
-                    </span>
+                  <h5>
+                    <Link to="/enroll">
+                      <button className="course-btn">Enroll Now</button>
+                    </Link>
+                  </h5>
+                  <h5><span><i class="ri-wallet-3-line"></i></span> Fee per Month</h5>
+                  <span>
+                    <ul>
+                      <li>Online (Group): 400 cedis</li>
+                      <li>Online (One on One): 1000 cedis</li>
+                      <li>In-person (One on One): 1800 cedis</li>
+                    </ul>
+                  </span>
                 </div>
               </Col>
-              <Col lg={4} md={12} className="lesson gap-5">
-                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
+              <Col lg={4} md={12} className="lesson gap-5" style={{paddingTop: "60px", paddingLeft: "100px"}}>
+                <div style={{paddingBottom: "20px"}}>
                   <div>
-                   <h5> <i class="ri-book-open-line"> </i> {course.lesson} Lessons </h5>
+                    <h5> <i class="ri-book-open-line"></i> {course.lesson} Lessons </h5>
                   </div>
                   <div>
                     <h5> <i class="ri-user-line"></i> {course.students} Learners</h5>
@@ -68,26 +68,47 @@ const CourseDetails = () => {
                     <h5> <i class="ri-star-fill"></i> {course.rating} </h5>
                   </div>
                   <div>
+                    <h5><i class="ri-code-s-slash-fill"></i> {course.difficulty}</h5>
+                  </div>
+                  <div>
+                    <h5 style={{paddingTop: "10px", color:"#17bf9e"}}>Requirement:</h5>
                     <h5><i class="ri-computer-fill"></i> {course.Requirements}</h5>
                   </div>
-                <div>
-                    <h5><i class="ri-code-s-slash-fill" ></i> {course.difficulty}</h5>
-                </div>
                 </div>
               </Col>
             </Row>
-              <Col>
-                <h2>Course Projects:</h2>
-                <ul>
-                  {course["Course related projects to be completed"].map((project, index) => (
-                    <ListGroupItem key={index}>{project}</ListGroupItem>
-                  ))}
-                </ul>
-              </Col>
+            <Col>
+              <h4 style={{color:"#17bf9e"}}>Course Projects:</h4>
+              <ul>
+                {course["Course related projects to be completed"].map((project, index) => (
+                  <li key={index}>{project}</li>
+                ))}
+              </ul>
+            </Col>
+            <Col>
+              <h4 style={{paddingTop: "30px", paddingBottom: "10px", color:"#17bf9e"}}>Course Details:</h4>
+              {course.Details.map((detail, index) => (
+                <div key={index}>
+                  {typeof detail === 'string' ? (
+                    <p>{detail}</p>
+                  ) : (
+                    <div>
+                      <h5>{detail.title}</h5>
+                      <ul>
+                        {detail.content.map((item, idx) => (
+                          <ListGroupItem key={idx}>{item}</ListGroupItem>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </Col>
           </Container>
           <Footer />
         </>
       ) : (
+
         <h6>Loading...</h6>
       )}
     </>

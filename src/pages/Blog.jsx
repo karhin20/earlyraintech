@@ -20,7 +20,7 @@ const Courses = () => {
       <Header />
       <ScrollToTopOnMount /> 
       <div>
-        <h5>We Provide You with Technology news <br/> when you need it</h5>
+        <h5>We Provide You with Technology news when you need it</h5>
       </div>           
       <Footer />
       </div>

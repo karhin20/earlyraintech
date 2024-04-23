@@ -1,4 +1,3 @@
-
 import Courses from './pages/Courses';
 import About from './pages/About';
 import CourseDetails from './pages/CourseSinglePage/CourseDetails';

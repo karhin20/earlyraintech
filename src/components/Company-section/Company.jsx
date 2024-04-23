@@ -9,15 +9,15 @@ const Company = () => {
       <Container>
         <h1 className="d-flex justify-content-center" style={{ color: "black", paddingBottom: "40px" }}>Contact Us:</h1>
         <Row className="contact-item">
-          <Col lg="4" md="4" sm="4" xs="12" className="d-flex justify-content-center">
+          <Col lg="4" md="4" sm="4" xs="12" className="d-flex justify-content-center"style={{paddingBottom: "10px" }}>
               <i className="ri-phone-line"></i>
               <motion.div
                 whileHover={{ textDecoration: "underline" }}    
             >
-              <a href="tel:+233543119117" style={{ color: "black", textDecoration: "none" }}>+233 543 119 117</a>
+              <a href="tel:+233543119117" style={{ color: "black", textDecoration: "none", paddingBottom: "4000px" }}>+233 543 119 117</a>
             </motion.div>
           </Col>
-          <Col lg="4" md="4" sm="4" xs="12" className="d-flex justify-content-center">
+          <Col lg="4" md="4" sm="4" xs="12" className="d-flex justify-content-center" style={{paddingBottom: "10px" }}>
               <i className="ri-mail-line"></i>
             <motion.div
             whileHover={{ textDecoration: "underline" }}
