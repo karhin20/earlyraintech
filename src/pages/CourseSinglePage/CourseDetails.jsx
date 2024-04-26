@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Container, Row, Col, ListGroupItem } from 'reactstrap';
+import { Container, Row, Col, ListGroupItem, Card, CardBody } from 'reactstrap';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { coursesData } from "../../assests/CourseData";
@@ -56,25 +56,30 @@ const CourseDetails = () => {
                   </span>
                 </div>
               </Col>
-              <Col lg={4} md={12} className="lesson gap-5" style={{paddingTop: "60px", paddingLeft: "100px"}}>
-                <div style={{paddingBottom: "20px"}}>
-                  <div>
-                    <h5> <i class="ri-book-open-line"></i> {course.lesson} Lessons </h5>
-                  </div>
-                  <div>
-                    <h5> <i class="ri-user-line"></i> {course.students} Learners</h5>
-                  </div>
-                  <div>
-                    <h5> <i class="ri-star-fill"></i> {course.rating} </h5>
-                  </div>
-                  <div>
-                    <h5><i class="ri-code-s-slash-fill"></i> {course.difficulty}</h5>
-                  </div>
-                  <div>
-                    <h5 style={{paddingTop: "10px", color:"#17bf9e"}}>Requirement:</h5>
-                    <h5><i class="ri-computer-fill"></i> {course.Requirements}</h5>
-                  </div>
-                </div>
+              <Col lg={4} md={12} className="lesson gap-5" style={{paddingTop: "125px", paddingLeft: "30px", paddingBottom: "50px"}}>
+              <Card className="shadow">
+                  <CardBody className="lesson gap-5" style={{paddingTop: "30px", paddingLeft: "50px"}}>
+                    <div style={{paddingBottom: "10px"}}>
+                      <div>
+                        <h5> <i class="ri-book-open-line"></i> {course.lesson} Lessons </h5>
+                      </div>
+                      <div>
+                        <h5> <i class="ri-user-line"></i> {course.students} Learners</h5>
+                      </div>
+                      <div>
+                        <h5> <i class="ri-star-fill"></i> {course.rating} </h5>
+                      </div>
+                      <div>
+                        <h5><i class="ri-code-s-slash-fill"></i> {course.difficulty}</h5>
+                        <h6>No previous knowledge required</h6>
+                      </div>
+                      <div>
+                        <h5 style={{paddingTop: "10px", color:"#17bf9e"}}>Requirements:</h5>
+                        <h5 style={{paddingBottom: "5px"}}><i class="ri-computer-fill"></i> {course.Requirements}</h5>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
             <Col>

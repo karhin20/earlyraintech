@@ -81,11 +81,11 @@ export const coursesData = [
     "videourl": "https://example.com/scratch_intro_video",
     "Description": "This course introduces Scratch programming language suitable for juniors to learn coding concepts through visual blocks.",
     "Details": [
-      "Scratch isn’t just about coding—it’s about nurturing creativity, problem-solving, and preparing kids for a digital world",
+      "Scratch isn’t just about coding—it’s about nurturing creativity, problem-solving, and preparing kids for a digital world. These are the benefits Learners will derive from this program",
       {
         "title": "Encourages Creative Thinking",
-        "description": [
-          "It provides an easy-to-learn yet powerful visual programming platform.",
+        "content": [
+          "The course provides an easy-to-learn yet powerful visual programming tutorials.",
           "Kids can create interactive stories, games, animations, and more.",
           "They can customize sprites, draw their designs, and let their imagination run wild.",
           "Creativity blossoms as they bring characters and worlds to life."
@@ -93,8 +93,8 @@ export const coursesData = [
       },
       {
         "title": "Fosters Problem-Solving",
-        "description": [
-          "Scratch follows the constructionist approach to learning.",
+        "content": [
+          "Our Scratch course follows the constructionist approach to learning.",
           "Kids break down problems into smaller sub-components using code blocks.",
           "They explore multiple solutions and plan out how different parts of their project will work together.",
           "Strong problem-solving and organizational skills develop through brainstorming in Scratch."
@@ -102,27 +102,26 @@ export const coursesData = [
       },
       {
         "title": "Fun and Interactive Learning",
-        "description": [
+        "content": [
           "Learning happens naturally when kids are having fun.",
-          "Scratch’s visually appealing interface makes coding enjoyable.",
-          "Projects are like puzzles, where kids snap code blocks together logically.",
-          "It’s a playful environment that encourages exploration and experimentation."
+          "Our Projects are like puzzles, where kids snap code blocks together logically.",
+          "The course content provides a playful environment that encourages exploration and experimentation."
         ]
       },
       {
         "title": "Develops Logical Thinking Skills",
-        "description": [
-          "Scratch enforces proper programming syntax.",
+        "content": [
+          "The course enforces proper programming syntax.",
           "Kids learn to assemble and formulate programming logic correctly.",
           "They understand how different blocks fit together to create functional programs."
         ]
       },
       {
         "title": "Stepping Stone to High-Level Programming",
-        "description": [
-          "Scratch serves as a gateway to more complex programming languages.",
+        "content": [
+          "The course serves as a gateway to more complex programming languages.",
           "It builds a solid foundation for future learning.",
-          "As kids gain confidence, they can transition to languages like Python, Java, or C++."
+          "As kids gain confidence, they can transition to languages like Python, JavaScript, or C++."
         ]
       }
     ],
@@ -148,6 +147,65 @@ export const coursesData = [
     "imgUrl": courseImg01,
     "videourl": "https://example.com/python_intro_video",
     "Description": "This course provides an introduction to Python programming language covering basic syntax, data types, and control structures.",
+    "Details": [
+      "Python is not just a language—it’s a gateway to creativity, problem-solving, and building amazing things! Python is a versatile and powerful programming language. Learners will gain the following skills.",
+      {
+        "title": "Basic Syntax and Fundamentals",
+        "content": [
+          "Understand Python’s syntax, data types (integers, floats, strings), variables, and operators.",
+          "Learn how to write and execute simple Python programs."
+        ]
+      },
+      {
+        "title": "Control Structures",
+        "content": [
+          "Dive into loops (for and while) and conditional statements (if, elif, else).",
+          "These allow you to control the flow of your code."
+        ]
+      },
+      {
+        "title": "Functions and Modularization",
+        "content": [
+          "Learn how to define and call functions.",
+          "Modularization helps organize your code into reusable components."
+        ]
+      },
+      {
+        "title": "Data Structures",
+        "content": [
+          "Explore lists, tuples, dictionaries, and sets.",
+          "These data structures allow you to store and manipulate data efficiently."
+        ]
+      },
+      {
+        "title": "File Handling",
+        "content": [
+          "Read and write files using Python.",
+          "Understand file modes, reading line by line, and writing data."
+        ]
+      },
+      {
+        "title": "Object-Oriented Programming (OOP)",
+        "content": [
+          "Discover classes, objects, inheritance, encapsulation, and polymorphism.",
+          "OOP principles enhance code organization and reusability."
+        ]
+      },
+      {
+        "title": "Exception Handling",
+        "content": [
+          "Learn to handle errors gracefully using try-except blocks.",
+          "Debugging skills are crucial!"
+        ]
+      },
+      {
+        "title": "Libraries and Modules",
+        "content": [
+          "Explore Python’s extensive standard library and third-party packages.",
+          "Examples include math, random, and datetime."
+        ]
+      }
+    ],
     "Course related projects to be completed": [
       "Create a simple calculator",
       "Develop a text-based adventure game",
