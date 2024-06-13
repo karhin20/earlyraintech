@@ -78,7 +78,7 @@ export const coursesData = [
     "students": 105,
     "rating": 4.5,
     "imgUrl": courseImg2,
-    "videourl": "https://example.com/scratch_intro_video",
+    "videourl": "https://youtu.be/_q2RgQMc96k?t=6",
     "Description": "This course introduces Scratch programming language suitable for juniors to learn coding concepts through visual blocks.",
     "Details": [
       "Scratch isn’t just about coding—it’s about nurturing creativity, problem-solving, and preparing kids for a digital world. These are the benefits Learners will derive from this program",
