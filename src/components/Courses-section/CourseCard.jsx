@@ -38,6 +38,11 @@ const CourseCard = (props) => {
           <p className="rating d-flex align-items-center gap-1">
             <i className="ri-star-fill"></i> {rating}
           </p>
+
+          <p className="lesson d-flex align-items-center gap-1">
+            <i className="ri-book-open-line"></i> {lesson} Lessons
+          </p>
+
           <p className="students d-flex align-items-center gap-1">
             <i className="ri-user-line"></i> {students}
           </p>
