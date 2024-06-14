@@ -27,21 +27,6 @@
   line-height: 5%;
 }
 
-@media (max-width: 768px) {
-  .d-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .lesson,
-  .students,
-  .rating {
-    flex: 1;
-    margin-right: 10px; 
-  }
-}
-
 .lesson i,
 .students i,
 .rating i {
