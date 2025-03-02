@@ -49,18 +49,33 @@ const HeroSection = () => {
               </h2>
               <p className="mb-5">
                 Select from our wide range of <strong>hands-on <br/> and project-based </strong> courses
+                
               </p>
               <p className="mb-5">
-              <strong>One 0n One </strong>and <br/> <strong>Group lessons</strong> are available  
+            
               </p>
-     </motion.div>
-             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-            >
-              <p>Unsure of the course to select? <br/>Get in touch. <br/><b>We will help you choose.</b> </p>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
+                <p>Unsure of the course to select? <br/>Get in touch. <br/><b>We will help you choose.</b> </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 1.2 }}
+                className="school-program-link"
+              >
+                <h4 >
+                  Are you a school administrator? <br />
+                  <a style={{marginTop: "10px"}} href="/schools-outreach" className="btn btn-primary ">
+                    Check out our Schools Program
+                  </a>
+                </h4>
+              </motion.div>
             </motion.div>
+            
           </Col>
 
           <Col lg="6" md="6">

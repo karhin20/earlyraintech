@@ -17,6 +17,10 @@ const navLinks = [
     url: "/courses",
   },
   {
+    display: "Schools Program",
+    url: "/schools-outreach",
+  },
+  {
     display: "Payments",
     url: "/payments",
   },

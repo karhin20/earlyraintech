@@ -1,22 +1,44 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { Button } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Button } from 'reactstrap';
+import './install-button.css';
 
 const InstallButton = ({ onInstallClick }) => {
-  let location = useLocation();
+  const [showInstall, setShowInstall] = useState(false);
+  const [isStandalone, setIsStandalone] = useState(false);
 
-  if (location.pathname !== "/") {
-    return null; 
+  useEffect(() => {
+    // Check if app is already installed
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    setIsStandalone(isStandalone);
+
+    // Show install prompt after 30 seconds if not installed
+    const timer = setTimeout(() => {
+      if (!isStandalone) {
+        setShowInstall(true);
+      }
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showInstall || isStandalone) {
+    return null;
   }
 
   return (
-    <Button
-      style={{ color: 'white', backgroundColor: "#17bf9e", transform: 'scale(1.1)', transition: 'transform 0.2s' }}
-      type="primary"
-      onClick={onInstallClick}
-    >
-      Install App
-    </Button>
+    <div className="install-prompt">
+      <div className="install-content">
+        <p>Install Early Rain Tech app for a better experience!</p>
+        <div className="install-buttons">
+          <Button color="primary" onClick={onInstallClick}>
+            Install Now
+          </Button>
+          <Button color="secondary" onClick={() => setShowInstall(false)}>
+            Maybe Later
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 

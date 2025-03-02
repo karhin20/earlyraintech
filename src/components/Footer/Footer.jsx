@@ -19,6 +19,11 @@ const footerQuickLinks = [
   },
 
   {
+    display: "Schools Program",
+    url: "/schools-outreach",
+  },
+
+  {
     display: "Payments",
     url: "/payments",
   },

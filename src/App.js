@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import RouteChangeTracker from './pages/RouteChangeTracker';
+import SchoolsOutreach from "./pages/SchoolsOutreach";
 
 
 function PageTracker() {
@@ -77,6 +78,7 @@ function App() {
         <Route path="/enroll" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/schools-outreach" element={<SchoolsOutreach />} />
       </Routes>
       <InstallButton onInstallClick={handleInstallClick} />
       <RouteChangeTracker />
